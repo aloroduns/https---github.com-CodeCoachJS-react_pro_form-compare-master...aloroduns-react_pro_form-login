@@ -38,9 +38,22 @@
 }
 
 .wrapper {
-  padding: 5px 20px;
+  padding: 5px 150px;
 }
 
 .wrapper fieldset {
-  margin: 20px 0;
+  margin: 0px 150;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items:center; /* vertically center the checkbox and text */
+  order: 1; /* Position the checkbox first */
+}
+
+/*style for the input (checkbox) */
+
+.checkbox-label input {
+  order: 2; /* position the input (checkbox) second */
+  margin-right: 8px; /*Add some space between the checkbox and text */
 }
