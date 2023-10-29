@@ -11,17 +11,18 @@ const formReducer = (state, event) => {
 function App() {
   const [formData, setFormData] = useReducer(formReducer, {});
   const [submitting, setSubmitting] = React.useState(false);
-
   const handleSubmit = (event) => {
     event.preventDefault();
+    const { firstName, lastName } = formData; // Extract firstName and lastName from formData
     // Display an alert with the user's full name
-    window.alert(`Hi, my name is ${formData.firstName} ${formData.lastName}`);
+    window.alert(`Hi, my name is ${firstName} ${lastName}`);
     setSubmitting(true);
-
+  
     setTimeout(() => {
       setSubmitting(false);
     }, 3000);
   };
+  
 
   const handleChange = (event) => {
     setFormData({
